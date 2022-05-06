@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Soap\LaravelRoyaltyPoint\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelRoyaltyPointCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-royalty-point';
 
     public $description = 'My command';
 
