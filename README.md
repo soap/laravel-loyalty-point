@@ -5,7 +5,11 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/soap/laravel-royalty-point/Check%20&%20fix%20styling?label=code%20style)](https://github.com/soap/laravel-royalty-point/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/soap/laravel-royalty-point.svg?style=flat-square)](https://packagist.org/packages/soap/laravel-royalty-point)
 
-Small laravel package to tracking reward points and its redemption for Laravel Application. My first goal is to used in my tutorial application to track student point reward and usage.
+Small laravel package to tracking reward points and its redemption for Laravel Application. My first goal is to use in my tutorial application to track student point reward and usage.
+- Daily student login reward.
+- Student rewarded point on completion of videdo lesson.
+- Student gains point from test score.
+- Student can use point to pay for tuition fee.
 
 ## Support us
 
