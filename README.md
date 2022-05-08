@@ -25,14 +25,14 @@ composer require soap/laravel-royalty-point
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-royalty-point-migrations"
+php artisan vendor:publish --tag="royalty-point-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-royalty-point-config"
+php artisan vendor:publish --tag="royalty-point-config"
 ```
 
 This is the contents of the published config file:
@@ -45,7 +45,7 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag="laravel-royalty-point-views"
+php artisan vendor:publish --tag="royalty-point-views"
 ```
 
 ## Usage

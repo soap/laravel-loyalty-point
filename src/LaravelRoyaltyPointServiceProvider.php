@@ -4,7 +4,9 @@ namespace Soap\LaravelRoyaltyPoint;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Soap\LaravelRoyaltyPoint\Commands\LaravelRoyaltyPointCommand;
+use Soap\LaravelRoyaltyPoint\Commands\RoyaltyPointActionCommand;
+use Soap\LaravelRoyaltyPoint\Commands\RoyaltyPointActionsCommand;
+use Soap\LaravelRoyaltyPoint\Commands\RoyaltyPointCheckCommand;
 
 class LaravelRoyaltyPointServiceProvider extends PackageServiceProvider
 {
@@ -20,6 +22,8 @@ class LaravelRoyaltyPointServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasMigration('create_royalty_points_table')
-            ->hasCommand(LaravelRoyaltyPointCommand::class);
+            ->hasCommand(RoyaltyPointActionCommand::class)
+            ->hasCommand(RoyaltyPointActionsCommand::class)
+            ->hasCommand(RoyaltyPointCheckCommand::class);
     }
 }
