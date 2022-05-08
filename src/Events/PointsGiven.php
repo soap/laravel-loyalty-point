@@ -9,7 +9,7 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class PoinsGiven implements ShouldBroadcast 
+class PointsGiven implements ShouldBroadcast 
 {
     public function __construct()
     {
