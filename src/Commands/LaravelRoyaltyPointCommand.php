@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class LaravelRoyaltyPointCommand extends Command
 {
-    public $signature = 'laravel-royalty-point';
+    public $signature = 'royaltypoint:check';
 
     public $description = 'My command';
 
