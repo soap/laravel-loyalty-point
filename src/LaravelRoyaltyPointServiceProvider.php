@@ -22,6 +22,7 @@ class LaravelRoyaltyPointServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasMigration('create_royalty_points_table')
+            ->hasMigration('create_royalty_point_trackings_table')
             ->hasCommand(RoyaltyPointActionCommand::class)
             ->hasCommand(RoyaltyPointActionsCommand::class)
             ->hasCommand(RoyaltyPointCheckCommand::class);
