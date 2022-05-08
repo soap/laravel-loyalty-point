@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('key')->unique();
             $table->string('description')->nullable();
-            $table->bigInteger('point');
+            $table->bigInteger('points');
             $table->nestedSet();
             $table->softDeletes();
             $table->timestamps();
