@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Kalnoy\Nestedset\NodeTrait;
 
-class LaravelRoyaltyPoint extends Model 
+class RoyaltyPoint extends Model 
 {
     use NodeTrait, SoftDeletes;
 
