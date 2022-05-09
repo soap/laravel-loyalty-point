@@ -12,8 +12,8 @@ return new class extends Migration
             $table->id();
 
             $table->morphs('pointable');
-            $table->foreignId('royalt_point_id');
-
+            $table->foreignId('royalty_point_id');
+            $table->bigInteger('points');
             $table->timestamps();
         });
     }
