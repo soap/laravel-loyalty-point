@@ -1,5 +1,5 @@
 <?php
-// config for Soap/LaravelRoyaltyPoint
+// config for Soap/LaravelLoyaltyPoint
 return [
     'broadcast' => [
         /*
