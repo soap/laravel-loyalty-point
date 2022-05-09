@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('royalty_points', function (Blueprint $table) {
+        Schema::create('loyalty_points', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('key')->unique();
@@ -22,6 +22,6 @@ return new class extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('royalty_points');
+        Schema::dropIfExists('loyalty_points');
     }
 };

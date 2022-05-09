@@ -1,0 +1,30 @@
+<?php
+
+namespace Soap\LaravelLoyaltyPoint;
+
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Soap\LaravelLoyaltyPoint\Commands\LoyaltyPointActionCommand;
+use Soap\LaravelLoyaltyPoint\Commands\LoyaltyPointActionsCommand;
+use Soap\LaravelLoyaltyPoint\Commands\LoyaltyPointCheckCommand;
+
+class LaravelLoyaltyPointServiceProvider extends PackageServiceProvider
+{
+    public function configurePackage(Package $package): void
+    {
+        /*
+         * This class is a Package Service Provider
+         *
+         * More info: https://github.com/spatie/laravel-package-tools
+         */
+        $package
+            ->name('laravel-Loyalty-point')
+            ->hasConfigFile()
+            ->hasViews()
+            ->hasMigration('create_Loyalty_points_table')
+            ->hasMigration('create_Loyalty_point_trackings_table')
+            ->hasCommand(LoyaltyPointActionCommand::class)
+            ->hasCommand(LoyaltyPointActionsCommand::class)
+            ->hasCommand(LoyaltyPointCheckCommand::class);
+    }
+}

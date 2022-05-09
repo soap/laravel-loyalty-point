@@ -1,10 +1,10 @@
 <?php
 
-namespace Soap\LaravelRoyaltyPoint\Tests;
+namespace Soap\LaravelLoyaltyPoint\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Soap\LaravelRoyaltyPoint\LaravelRoyaltyPointServiceProvider;
+use Soap\LaravelLoyaltyPoint\LaravelLoyaltyPointServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Soap\\LaravelRoyaltyPoint\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Soap\\LaravelLoyaltyPoint\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            LaravelRoyaltyPointServiceProvider::class,
+            LaravelLoyaltyPointServiceProvider::class,
         ];
     }
 
@@ -29,7 +29,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
 
         /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-royalty-point_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_laravel-Loyalty-point_table.php.stub';
         $migration->up();
         */
     }

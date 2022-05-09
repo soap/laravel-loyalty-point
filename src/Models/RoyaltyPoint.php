@@ -1,13 +1,13 @@
 <?php
 
-namespace Soap\LaravelRoyaltyPoint\Models;
+namespace Soap\LaravelLoyaltyPoint\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Kalnoy\Nestedset\NodeTrait;
 
-class RoyaltyPoint extends Model 
+class LoyaltyPoint extends Model 
 {
     use NodeTrait, SoftDeletes;
 

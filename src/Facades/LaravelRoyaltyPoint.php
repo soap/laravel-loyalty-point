@@ -1,16 +1,16 @@
 <?php
 
-namespace Soap\LaravelRoyaltyPoint\Facades;
+namespace Soap\LaravelLoyaltyPoint\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Soap\LaravelRoyaltyPoint\LaravelRoyaltyPoint
+ * @see \Soap\LaravelLoyaltyPoint\LaravelLoyaltyPoint
  */
-class LaravelRoyaltyPoint extends Facade
+class LaravelLoyaltyPoint extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'laravel-royalty-point';
+        return 'laravel-loyalty-point';
     }
 }

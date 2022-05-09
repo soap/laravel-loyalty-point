@@ -8,11 +8,11 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('royalty_point_trackings', function (Blueprint $table) {
+        Schema::create('loyalty_point_trackings', function (Blueprint $table) {
             $table->id();
 
             $table->morphs('pointable');
-            $table->foreignId('royalty_point_id');
+            $table->foreignId('loyalty_point_id');
             $table->bigInteger('points');
             $table->timestamps();
         });
@@ -20,6 +20,6 @@ return new class extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('royalty_point_trackings');
+        Schema::dropIfExists('loyalty_point_trackings');
     }
 };

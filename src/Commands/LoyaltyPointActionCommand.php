@@ -1,12 +1,12 @@
 <?php
 
-namespace Soap\LaravelRoyaltyPoint\Commands;
+namespace Soap\LaravelLoyaltyPoint\Commands;
 
 use Illuminate\Console\Command;
 
-class RoyaltyPointActionCommand extends Command
+class LoyaltyPointActionCommand extends Command
 {
-    public $signature = 'royaltypoint:action';
+    public $signature = 'loyaltypoint:action';
 
     public $description = 'Create point action';
 

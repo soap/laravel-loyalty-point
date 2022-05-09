@@ -1,13 +1,13 @@
 {
-    "name": "soap/laravel-royalty-point",
-    "description": "Laravel package to track royalty points",
+    "name": "soap/laravel-loyalty-point",
+    "description": "Laravel package to track loyalty points",
     "keywords": [
         "soap",
         "laravel",
-        "royalty",
+        "loyalty",
         "reward point"
     ],
-    "homepage": "https://github.com/soap/laravel-royalty-point",
+    "homepage": "https://github.com/soap/laravel-loyalty-point",
     "license": "MIT",
     "authors": [
         {
@@ -36,13 +36,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Soap\\LaravelRoyaltyPoint\\": "src",
-            "Soap\\LaravelRoyaltyPoint\\Database\\Factories\\": "database/factories"
+            "Soap\\LaravelLoyaltyPoint\\": "src",
+            "Soap\\LaravelLoyaltyPoint\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Soap\\LaravelRoyaltyPoint\\Tests\\": "tests"
+            "Soap\\LaravelLoyaltyPoint\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -60,10 +60,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Soap\\LaravelRoyaltyPoint\\LaravelRoyaltyPointServiceProvider"
+                "Soap\\LaravelLoyaltyPoint\\LaravelLoyaltyPointServiceProvider"
             ],
             "aliases": {
-                "LaravelRoyaltyPoint": "Soap\\LaravelRoyaltyPoint\\Facades\\LaravelRoyaltyPoint"
+                "LaravelLoyaltyPoint": "Soap\\LaravelLoyaltyPoint\\Facades\\LaravelLoyaltyPoint"
             }
         }
     },

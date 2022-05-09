@@ -1,14 +1,14 @@
 blank_issues_enabled: false
 contact_links:
   - name: Ask a question
-    url: https://github.com/soap/laravel-royalty-point/discussions/new?category=q-a
+    url: https://github.com/soap/laravel-loyalty-point/discussions/new?category=q-a
     about: Ask the community for help
   - name: Request a feature
-    url: https://github.com/soap/laravel-royalty-point/discussions/new?category=ideas
+    url: https://github.com/soap/laravel-loyalty-point/discussions/new?category=ideas
     about: Share ideas for new features
   - name: Report a security issue
-    url: https://github.com/soap/laravel-royalty-point/security/policy
+    url: https://github.com/soap/laravel-loyalty-point/security/policy
     about: Learn how to notify us for sensitive bugs
   - name: Report a bug
-    url: https://github.com/soap/laravel-royalty-point/issues/new
+    url: https://github.com/soap/laravel-loyalty-point/issues/new
     about: Report a reproducable bug

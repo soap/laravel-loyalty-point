@@ -1,6 +1,6 @@
 <?php
 
-namespace Soap\LaravelRoyaltyPoint\Events;
+namespace Soap\LaravelLoyaltyPoint\Events;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
