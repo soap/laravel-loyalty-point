@@ -2,8 +2,8 @@
 
 namespace Soap\LaravelLoyaltyPoint\Events;
 
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Broadcasting\PrivateChannel;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
 class PointsGiven implements ShouldBroadcast
 {
