@@ -2,9 +2,8 @@
 
 namespace Soap\LaravelLoyaltyPoint\Traits;
 
-trait Pointable 
+trait Pointable
 {
-
     public function points()
     {
         return $this->morphToMany(LoyaltyPoint::class, 'pointable');
