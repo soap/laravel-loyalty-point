@@ -24,7 +24,7 @@ class PointsGiven implements ShouldBroadcast
      */
     public function broadcastAs()
     {
-
+        return 'points-given';
     }
 
     /**
@@ -34,7 +34,7 @@ class PointsGiven implements ShouldBroadcast
      */
     public function broadcastWith()
     {
-
+        return [];
     }
     
     /**
@@ -44,6 +44,6 @@ class PointsGiven implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        
+        return new PrivateChannel('users');
     }
 }

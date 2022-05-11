@@ -22,11 +22,14 @@ class LaravelLoyaltyPointServiceProvider extends PackageServiceProvider
             ->name('laravel-loyalty-point')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_loyalty_points_table')
-            ->hasMigration('create_loyalty_point_trackings_table')
-            ->hasCommand(LoyaltyPointActionCommand::class)
-            ->hasCommand(LoyaltyPointActionsCommand::class)
-            ->hasCommand(LoyaltyPointCheckCommand::class);       
+            ->hasMigrations([
+                'create_loyalty_points_table',
+                'create_loyalty_point_trackings_table'])
+            ->hasCommands([
+                LoyaltyPointActionCommand::class,
+                LoyaltyPointActionsCommand::class,
+                LoyaltyPointCheckCommand::class
+            ]);       
     }
 
     public function registeringPackage()

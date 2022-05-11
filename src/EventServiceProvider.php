@@ -4,7 +4,7 @@ namespace Soap\LaravelLoyaltyPoint;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Soap\LaravelLoyalty\Events\PointsGiven;
+use Soap\LaravelLoyaltyPoint\Events\PointsGiven;
 
 class EventServiceProvider extends ServiceProvider
 {
