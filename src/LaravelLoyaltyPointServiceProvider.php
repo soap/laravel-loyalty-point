@@ -2,12 +2,11 @@
 
 namespace Soap\LaravelLoyaltyPoint;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Soap\LaravelLoyaltyPoint\EventServiceProvider;
 use Soap\LaravelLoyaltyPoint\Commands\LoyaltyPointActionCommand;
 use Soap\LaravelLoyaltyPoint\Commands\LoyaltyPointActionsCommand;
 use Soap\LaravelLoyaltyPoint\Commands\LoyaltyPointCheckCommand;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class LaravelLoyaltyPointServiceProvider extends PackageServiceProvider
 {

@@ -4,5 +4,4 @@ namespace Soap\LaravelLoyaltyPoint;
 
 class LaravelLoyaltyPoint
 {
-    
 }

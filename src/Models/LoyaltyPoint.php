@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Kalnoy\Nestedset\NodeTrait;
 
-class LoyaltyPoint extends Model 
+class LoyaltyPoint extends Model
 {
-    use NodeTrait, SoftDeletes;
+    use NodeTrait;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
