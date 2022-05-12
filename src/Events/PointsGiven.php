@@ -2,21 +2,15 @@
 
 namespace Soap\LaravelLoyaltyPoint\Events;
 
-use Illuminate\Broadcasting\Channel;
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
-use Illuminate\Broadcasting\PresenceChannel;
-use Illuminate\Foundation\Events\Dispatchable;
-use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class PointsGiven implements ShouldBroadcast 
+class PointsGiven implements ShouldBroadcast
 {
     public function __construct()
     {
-        
     }
-    
+
     /**
      * The event's broadcast name.
      *
@@ -24,7 +18,7 @@ class PointsGiven implements ShouldBroadcast
      */
     public function broadcastAs()
     {
-
+        return 'points-given';
     }
 
     /**
@@ -34,9 +28,9 @@ class PointsGiven implements ShouldBroadcast
      */
     public function broadcastWith()
     {
-
+        return [];
     }
-    
+
     /**
      * Get the channels the event should broadcast on.
      *
@@ -44,6 +38,6 @@ class PointsGiven implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        
+        return new PrivateChannel('users');
     }
 }

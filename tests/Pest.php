@@ -1,5 +1,5 @@
 <?php
 
-use Soap\LaravelRoyaltyPoint\Tests\TestCase;
+use Soap\LaravelLoyaltyPoint\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

@@ -2,11 +2,11 @@
 
 namespace Soap\LaravelLoyaltyPoint;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Soap\LaravelLoyaltyPoint\Commands\LoyaltyPointActionCommand;
 use Soap\LaravelLoyaltyPoint\Commands\LoyaltyPointActionsCommand;
 use Soap\LaravelLoyaltyPoint\Commands\LoyaltyPointCheckCommand;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class LaravelLoyaltyPointServiceProvider extends PackageServiceProvider
 {
@@ -21,10 +21,18 @@ class LaravelLoyaltyPointServiceProvider extends PackageServiceProvider
             ->name('laravel-loyalty-point')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_loyalty_points_table')
-            ->hasMigration('create_loyalty_point_trackings_table')
-            ->hasCommand(LoyaltyPointActionCommand::class)
-            ->hasCommand(LoyaltyPointActionsCommand::class)
-            ->hasCommand(LoyaltyPointCheckCommand::class);
+            ->hasMigrations([
+                'create_loyalty_points_table',
+                'create_loyalty_point_trackings_table', ])
+            ->hasCommands([
+                LoyaltyPointActionCommand::class,
+                LoyaltyPointActionsCommand::class,
+                LoyaltyPointCheckCommand::class,
+            ]);
+    }
+
+    public function registeringPackage()
+    {
+        $this->app->register(EventServiceProvider::class);
     }
 }
