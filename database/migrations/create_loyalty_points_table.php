@@ -12,11 +12,12 @@ return new class extends Migration
         Schema::create('loyalty_points', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('key')->unique();
+            $table->string('slug')->unique();
+            $table->string('event')->comment('event name generated this action');
             $table->string('description')->nullable();
             $table->bigInteger('points');
-            // $table->nestedSet(); // PHPStan doesnot like it
-            NestedSet::columns($table); // PHPStan like this one
+            $table->foreignId('expiring_method_id')->constrained();
+
             $table->softDeletes();
             $table->timestamps();
         });

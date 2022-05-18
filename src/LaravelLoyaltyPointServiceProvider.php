@@ -22,6 +22,7 @@ class LaravelLoyaltyPointServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasMigrations([
+                'create_expiring_methods_table',
                 'create_loyalty_points_table',
                 'create_loyalty_point_trackings_table', ])
             ->hasCommands([
