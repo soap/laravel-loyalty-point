@@ -2,17 +2,17 @@
 
 namespace Soap\LaravelLoyaltyPoint\Models;
 
+use Carbon\Carbon;
+use Carbon\Exceptions\InvalidFormatException;
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Str;
-use Carbon\Carbon;
-use Carbon\Exceptions\InvalidFormatException;
 
 class ExpiringMethod extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
+    use SoftDeletes;
 
     protected $fillable = [
         'name',
@@ -21,39 +21,42 @@ class ExpiringMethod extends Model
 
     /**
      * Calculate expring date
-     * @param \DateTimeInterface|string $startDateTime 
-     * @return \DatetimeInterface|boolean
+     * @param \DateTimeInterface|string $startDateTime
+     * @return \DatetimeInterface|bool
      */
-    public function getExpiringDate($startDateTime) 
+    public function getExpiringDate($startDateTime)
     {
         $startDateTime = $this->resolveDateTime($startDateTime);
-        if ($this->expiring_value === 0) return false;
+        if ($this->expiring_value === 0) {
+            return false;
+        }
         $expiringDate = $startDateTime;
         switch ($this->expiring_period) {
-            case 'after': 
-                    // expiring_unit = {day, week, month} 
+            case 'after':
+                    // expiring_unit = {day, week, month}
                     $expiringDate = $startDateTime->add($this->expiring_value, $this->expiring_unit.'s');
+
                 break;
             case 'end of':
                     if ($this->expiring_unit == 'week') {
                         $expiringDate = $startDateTime->endOfWeek();
-                    }else if ($this->expiring_unit == 'month') {
+                    } elseif ($this->expiring_unit == 'month') {
                         $expiringDate = $startDateTime->endOfMonth();
-                    }else if ($this->expiring_unit == 'year') {
+                    } elseif ($this->expiring_unit == 'year') {
                         $expiringDate = $startDateTime->endOfYear();
                     }
-                    
+
                 break;
         }
 
         return $expiringDate;
-    } 
+    }
 
     /**
      * Verify if input is Carbon::instance
-     * @param mixed $dateTime 
-     * @return Carbon|void 
-     * @throws InvalidFormatException 
+     * @param mixed $dateTime
+     * @return Carbon|void
+     * @throws InvalidFormatException
      */
     protected function resolveDateTime($dateTime)
     {
@@ -65,5 +68,4 @@ class ExpiringMethod extends Model
             return Carbon::parse($dateTime);
         }
     }
-
 }

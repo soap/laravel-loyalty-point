@@ -2,18 +2,17 @@
 
 namespace Soap\LaravelLoyaltyPoint\Tests\Unit;
 
+use Carbon\Carbon;
 use Soap\LaravelLoyaltyPoint\Models\ExpiringMethod;
 use Soap\LaravelLoyaltyPoint\Tests\TestCase;
-use Carbon\Carbon;
 
 class ExpiringMethodTest extends TestCase
 {
-
     /** @test */
     public function an_expiring_method_has_name()
     {
         $expiringMethod = ExpiringMethod::factory()->make([
-            'name' => 'Expiring after 10 days'
+            'name' => 'Expiring after 10 days',
         ]);
 
         $this->assertEquals('Expiring after 10 days', $expiringMethod->name);
@@ -24,7 +23,7 @@ class ExpiringMethodTest extends TestCase
     {
         $expiringMethod = ExpiringMethod::factory()->make([
             'name' => 'Expiring after 10 days',
-            'expiring_period' => 'after'
+            'expiring_period' => 'after',
         ]);
 
         $this->assertEquals('after', $expiringMethod->expiring_period);
@@ -35,7 +34,7 @@ class ExpiringMethodTest extends TestCase
     {
         $expiringMethod = ExpiringMethod::factory()->make([
             'name' => 'Expiring after 10 days',
-            'expiring_unit' => 'day'
+            'expiring_unit' => 'day',
         ]);
 
         $this->assertEquals('day', $expiringMethod->expiring_unit);
@@ -47,10 +46,10 @@ class ExpiringMethodTest extends TestCase
         $expiringMethod = ExpiringMethod::factory()->make([
             'name' => 'Expiring after 10 days',
             'expiring_period' => 'end of',
-            'expiring_unit' => 'week'
+            'expiring_unit' => 'week',
         ]);
 
-        $startDate = Carbon::now(); 
+        $startDate = Carbon::now();
         $this->assertEquals($startDate->endOfWeek(), $expiringMethod->getExpiringDate($startDate));
     }
 
@@ -60,10 +59,10 @@ class ExpiringMethodTest extends TestCase
         $expiringMethod = ExpiringMethod::factory()->make([
             'name' => 'Expiring after 10 days',
             'expiring_period' => 'end of',
-            'expiring_unit' => 'month'
+            'expiring_unit' => 'month',
         ]);
 
-        $startDate = Carbon::now(); 
+        $startDate = Carbon::now();
         $this->assertEquals($startDate->endOfMonth(), $expiringMethod->getExpiringDate($startDate));
     }
 
@@ -73,10 +72,10 @@ class ExpiringMethodTest extends TestCase
         $expiringMethod = ExpiringMethod::factory()->make([
             'name' => 'Expiring after 10 days',
             'expiring_period' => 'end of',
-            'expiring_unit' => 'month'
+            'expiring_unit' => 'month',
         ]);
 
-        $startDate = Carbon::now(); 
+        $startDate = Carbon::now();
         $this->assertEquals($startDate->endOfMonth(), $expiringMethod->getExpiringDate($startDate));
     }
 }
